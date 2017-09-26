@@ -1,0 +1,30 @@
+{
+  "name": "baseline-pixi-bunnymark",
+  "version": "1.0.0",
+  "description": "Baseline Pixi Bunnymark",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf ./dist",
+    "build": "npm run clean && cross-env BUILD_TYPE=production node fuse.js && cp -R ./src/webpage/static ./dist/",
+    "build:debug": "npm run clean && cross-env BUILD_TYPE=build-debug node fuse.js && cp -R ./src/webpage/static ./dist/",
+    "test": "npm run clean && cross-env BUILD_TYPE=test node fuse.js",
+    "dev": "npm run clean && cross-env BUILD_TYPE=dev node fuse.js"
+  },
+  "author": "David Komer",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chai": "4.0.4",
+    "@types/node": "8.0.28",
+    "@types/pixi.js": "4.5.4",
+    "chai": "^4.1.2",
+    "cross-env": "5.0.5",
+    "fuse-box": "2.2.3-beta.19",
+    "fuse-test-runner": "1.0.14",
+    "install": "^0.10.1",
+    "npm": "^5.4.1",
+    "pixi.js": "4.5.6",
+    "rimraf": "2.6.1",
+    "typescript": "2.5.2",
+    "uglify-js": "3.0.28"
+  }
+}
